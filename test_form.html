@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <center>
+<title>Student Registration Form</title>
+<script>
+function validateForm(){
+
+let name = document.getElementById("name").value.trim();
+let email = document.getElementById("email").value.trim();
+let phone = document.getElementById("phone").value.trim();
+let course = document.getElementById("course").value;
+
+if(name=="" || email=="" || phone=="" || course==""){
+alert("Please fill all fields!");
+return false;
+}
+
+if(phone.length != 10){
+alert("Phone number must be 10 digits!");
+return false;
+}
+
+alert("Registration Successful!");
+return false;
+
+}
+</script>
+</head>
+</center>
+<body>
+
+<h2>Student Registration Form</h2>
+
+<form onsubmit="return validateForm()">
+
+Name:<br>
+<input type="text" id="name"><br><br>
+
+Email:<br>
+<input type="email" id="email"><br><br>
+
+Phone:<br>
+<input type="text" id="phone"><br><br>
+
+Course:<br>
+<select id="course">
+<option value="">Select Course</option>
+<option>BTech</option>
+<option>BSc</option>
+<option>BCA</option>
+<option>MTech</option>
+</select>
+
+<br><br>
+
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+
+
+</form>
+
+</body>
+</html>
